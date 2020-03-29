@@ -14,7 +14,7 @@ import {
   NavbarText
 } from 'reactstrap';
 
-const Navi = (props) => {
+const NavBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -27,10 +27,13 @@ const Navi = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink href="/components/">About Me</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+              <NavLink href="https://github.com/reactstrap/reactstrap">Contact Me</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="https://github.com/reactstrap/reactstrap">Portfolio</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
@@ -42,6 +45,9 @@ const Navi = (props) => {
                 </DropdownItem>
                 <DropdownItem>
                   Option 2
+                </DropdownItem>
+                <DropdownItem>
+                  Option 3
                 </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem>
@@ -57,4 +63,4 @@ const Navi = (props) => {
   );
 }
 
-export default Navi;
+export default NavBar;
