@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import NavBar from "./components/navbar/navbar";
+import Navi from "./components/navbar/navbar";
 import Wrapper from "./components/wrapper/wrapper";
 import About from "./components/pages/about";
 import Contact from "./components/pages/contact";
@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
     <div className="App">
-    <NavBar/>
+    <Navi/>
     <Wrapper>
           <Route exact path="/about" component={About} />
           <Route exact path="/contact" component={Contact} />

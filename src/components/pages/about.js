@@ -1,8 +1,8 @@
 import React from "react";
-import Hero from "../Hero/Hero";
-import Container from "../Container/Container";
-import Row from "../Row/Row";
-import Col from "../Col/Col";
+import Hero from "../hero/hero";
+import Container from "../container/container";
+import Row from "../row/row";
+import Col from "../col/col";
 import { Nav } from "reactstrap";
 
 function About() {
