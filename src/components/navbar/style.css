@@ -2,14 +2,25 @@ a {
     background-color:magenta;
     color: white;
     padding: 1em 1.5em;
-    text-decoration: none;
+    text-decoration: double;
     text-transform: uppercase;
+    
   }
   
   /* Non-Demo Styles */
   body {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: top;
+    align-items: top;
     height: 100vh;
+    
   }
+  h1 {
+    font-size: 38px;
+    font-style:  oblique;
+    font-weight: bolder;
+    color:rebeccapurple;
+    text-decoration-style: solid;
+    text-decoration: underline;
+  }
+

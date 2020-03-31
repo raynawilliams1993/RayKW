@@ -5,9 +5,9 @@ const Navi = (props) => {
   return (
     <div>
      
-   <h1>Explore</h1>
+   <h1 >Welcome!</h1>
       <Nav>
-        <NavLink type="button-toggle" href="#">Link</NavLink> <NavLink href="#">Link</NavLink> <NavLink href="#">Another Link</NavLink> <NavLink disabled href="#">Disabled Link</NavLink>
+        <NavLink type="button-toggle" href="/about">About Me</NavLink> <NavLink href="/contact">Contact</NavLink> <NavLink href="/portfolio">Portfolio</NavLink> 
       </Nav>
     </div>
   );
