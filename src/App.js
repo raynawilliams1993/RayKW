@@ -10,6 +10,7 @@ import LandingPage from "./components/landingPage/landingPage";
 
 function App() {
   return (
+    
     <Router>
     <div className="App">
     <Navi/>
