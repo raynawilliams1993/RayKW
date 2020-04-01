@@ -7,9 +7,10 @@ import {
 const LandingPage = props => (
   <Provider>
     <Hero
-      color="black"
-      bg="white"
-      backgroundImage="https://source.unsplash.com/jxaj-UrzQbc/1600x900"
+      color="white"
+    //   bg="white"
+       
+      backgroundImage="https://images.wallpaperscraft.com/image/paint_stains_mixing_140283_1280x720.jpg"
     >
         <Heading>Rayna K. Williams</Heading>
         {/* <Subhead>use the navbar to explore</Subhead> */}

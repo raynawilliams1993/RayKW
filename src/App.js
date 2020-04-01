@@ -5,7 +5,7 @@ import Wrapper from "./components/wrapper/wrapper";
 import About from "./components/pages/about";
 import Contact from "./components/contact/contact";
 import Portfolio from "./components/pages/portfolio";
-import LandingPage from "./components/pages/landingPage";
+import LandingPage from "./components/landingPage/landingPage";
 
 
 function App() {
