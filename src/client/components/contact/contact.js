@@ -1,57 +1,31 @@
-  
-import React, {Component} from 'react';
-import axios from 'axios';
+import React from 'react';
+import emailjs from 'emailjs-com';
 
-class ContactForm extends Component{
-  
-    handleSubmit(e){
-        e.preventDefault();
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-        axios({
-            method: "POST", 
-            url:"http://localhost:3002/send", 
-            data: {
-                name: name,   
-                email: email,  
-                messsage: message
-            }
-        }).then((response)=>{
-            if (response.data.msg === 'success'){
-                alert("Message Sent."); 
-                this.resetForm()
-            }else if(response.data.msg === 'fail'){
-                alert("Message failed to send.")
-            }
-        })
-    }
 
-    resetForm(){
-        document.getElementById('contact-form').reset();
-    }
 
-    render(){
-        return(
-            <div className="col-sm-4 offset-sm-4">
-                <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
-                    <div className="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" className="form-control" id="name" />
-                    </div>
-                    <div className="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" className="form-control" id="email" aria-describedby="emailHelp" />
-                    </div>
-                    <div className="form-group">
-                        <label for="message">Message</label>
-                        <textarea className="form-control" rows="5" id="message"></textarea>
-                    </div>
-                    <button type="submit" className="btn btn-primary">Submit</button>
-                </form>
-            </div>
-        )
-    }
+export default function Contact() {
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm(' raynawilliams123@gmail.com', 'template_VdSUnUlH', e.target, ' user_rQAfo2LqdAFbDjN0XimZZ')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  }
+
+  return (
+    <form className="contact-form" onSubmit={sendEmail}>
+      <input type="hidden" name="contact_number" />
+      <label>Name</label>
+      <input type="text" name="user_name" />
+      <label>Email</label>
+      <input type="email" name="user_email" />
+      <label>Message</label>
+      <textarea name="message" />
+      <input type="submit" value="Send" />
+    </form>
+  );
 }
-
-export default ContactForm; 
