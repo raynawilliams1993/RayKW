@@ -1,31 +1,150 @@
-import React from 'react';
-import emailjs from 'emailjs-com';
 
+import React, { Component } from 'react';
 
+class Contact extends Component {
+  constructor(props) {
+    super(props);
 
-export default function Contact() {
+    this.state = {
+      //in here put the userID you got from emailjs 
+      REACT_APP_EMAILJS_USERID: 'user_rQAfo2LqdAFbDjN0XimZZ',
+      //the template ID of the template you created in the emailjs
+      templateId: 'template_IldEFUEB',
+      formSubmitted: false,
+      feedback: 'Test'
+    }
+    this.onSubmit = this.onSubmit.bind(this);
+    this.sendFeedback = this.sendFeedback.bind(this);
 
-  function sendEmail(e) {
-    e.preventDefault();
-
-    emailjs.sendForm(' raynawilliams123@gmail.com', 'template_VdSUnUlH', e.target, ' user_rQAfo2LqdAFbDjN0XimZZ')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
   }
 
-  return (
-    <form className="contact-form" onSubmit={sendEmail}>
-      <input type="hidden" name="contact_number" />
-      <label>Name</label>
-      <input type="text" name="user_name" />
-      <label>Email</label>
-      <input type="email" name="user_email" />
-      <label>Message</label>
-      <textarea name="message" />
-      <input type="submit" value="Send" />
-    </form>
-  );
+  onSubmit(event) {
+
+    event.preventDefault();
+
+
+
+
+
+    const { templateId } = this.state;
+
+
+
+    //Getting the variables from the forms
+    this.sendFeedback(
+      templateId,
+      this.sender,
+      this.refs.email.value,
+      this.state.feedback,
+      this.refs.lastname.value,
+      this.refs.firstname.value,
+      this.refs.phone.value
+
+
+
+
+    );
+
+    this.setState({
+      formSubmitted: true
+    });
+
+
+
+  }
+
+  //In here the data is send to the mailgun server with the correct templateID
+  sendFeedback(templateId, senderEmail, receiverEmail, feedback, lastname, firstname, phone) {
+    window.emailjs
+      .send('mailgun', templateId, {
+        senderEmail,
+        receiverEmail,
+        feedback,
+        lastname,
+        firstname,
+        phone
+
+
+
+      })
+      .then(res => {
+        console.log('MAIL SENT!')
+        alert("Mail Sent")
+        this.setState({
+          formEmailSent: true
+        });
+      })
+      // Handle errors if the mail didnt passed 
+      .catch(err => console.error('Failed to send feedback. Error: ', err));
+  }
+
+
+
+  render() {
+
+    return (
+      <div>
+
+        <br />
+
+
+
+        <div className="row">
+
+          <form id="myform" className="col s12" onSubmit={this.onSubmit}>
+
+            <ul className="collection">
+              <li className="collection-item">Enter User Details</li>
+              <li className="collection-item">
+
+                <div className="input-field col s6">
+                  <i className="material-icons prefix">face</i>
+                  <input id="firstname" type="text" className="validate"
+                    ref="firstname" required />
+
+
+                </div>
+                <div className="input-field col s6">
+                  <i className="material-icons prefix">face</i>
+                  <input id="lastname" type="text" className="validate"
+                    ref="lastname" name="lname" required />
+
+
+                </div>
+
+
+                <div className="input-field col s6">
+                  <i className="material-icons prefix">email</i>
+                  <input id="email" type="email" className="validate"
+                    ref="email" required />
+
+                </div>
+
+                <div className="input-field col s6">
+                  <i className="material-icons prefix">phone</i>
+                  <input id="phone" type="text" className="validate"
+                    ref="phone" />
+
+
+                </div>
+
+
+
+
+              </li>
+
+            </ul>
+            <input type="submit" className="btn green" value="Confrim" />
+
+
+
+          </form>
+        </div>
+
+      </div>
+    )
+  }
 }
+
+
+export default Contact;

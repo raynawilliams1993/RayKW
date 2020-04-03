@@ -6,7 +6,7 @@ import About from "./client/components/pages/about";
 import Contact from "./client/components/contact/contact";
 import Portfolio from "./client/components/pages/portfolio";
 import LandingPage from "./client/components/landingPage/landingPage";
-import ContactForm from "./client/components/contact/contact";
+
 
 
 function App() {
@@ -15,12 +15,12 @@ function App() {
     <Router>
     <div className="App">
     <Navi/>
-    
+   
     <Wrapper>
-          <Route exact path= "/" component={LandingPage} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/contact" component={Contact} />
-          <Route exact path="/portfolio" component={Portfolio} />
+          <Route  path= "/" render={() => <LandingPage />} exact/>
+          <Route  path="/about" render= {()=> <About /> } exact />
+          <Route path="/contact" render= {()=> <Contact />} exact />
+          <Route  path="/portfolio" render= {()=> <Portfolio />} exact />
           
         </Wrapper>
         
