@@ -1,150 +1,61 @@
+import React, {useState} from 'react';
+import './contact.scss';
+import axios from 'axios';
+import Spinner from '../spinner/spinner';
 
-import React, { Component } from 'react';
-
-class Contact extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      //in here put the userID you got from emailjs 
-      REACT_APP_EMAILJS_USERID: 'user_rQAfo2LqdAFbDjN0XimZZ',
-      //the template ID of the template you created in the emailjs
-      templateId: 'template_IldEFUEB',
-      formSubmitted: false,
-      feedback: 'Test'
-    }
-    this.onSubmit = this.onSubmit.bind(this);
-    this.sendFeedback = this.sendFeedback.bind(this);
-
+export default function Contact() {
+  document.title = 'Contact';
+  const [spinner, setSpinner] = useState(false);
+  const [state, setState] = useState({message: '', status: true});
+  async function sendEmail(e){
+	e.preventDefault();
+	if(localStorage.getItem('dateOfSend')){
+		if(Date.now() - localStorage.getItem('dateOfSend') < 1200000){
+			setState({message: `Fail, Try in ${Math.ceil((1200000 / 60000) - (Date.now() - +localStorage.getItem('dateOfSend'))/60000)} min `, status: false});
+			return;
+		}
+	}
+	setSpinner(true);
+	try{
+		const result = await axios.post('raynawilliams123@gmail.com', {
+			text: e.target.emailText.value,
+			them: e.target.emailSubject.value
+		});
+		if(result.status === 200){
+			window.localStorage.setItem('dateOfSend', Date.now());
+			setState({...state, message: 'Success, Thank you', status: true});
+		}
+		setSpinner(false);
+	}catch(err){
+		// setState({message: err.response.data.message, status: false});
+		setSpinner(false);
+	}
   }
 
-  onSubmit(event) {
+	return(
+		<div className='contact'>
+			{spinner ? <Spinner/> : ''}
+			<div className="contact-image"></div>
+			<div className='contact-form'>
+				<form onSubmit = {sendEmail}>
+				<label>Enter your theme</label>
+				<br></br>
+				<input required type='text' name="emailSubject" className="form-control z-depth-1" rows="3" placeholder="Write your them"></input>
+				<br></br>
+				<label>Enter your message</label>
+				<br></br>
+				<textarea type='textarea' name="emailText" className="form-control z-depth-1" rows="3" placeholder="Write your message"></textarea>
+				<br></br>
+				<input className='submitButton' type="submit" color='info' value='Send'></input>
+				<br></br>
+				<br></br>
+				<h2 style={{color: state.status ? 'green' : 'red', fontStyle: 'italic', textAlign: 'center'}}>{state.message}</h2>
+				<div className="underline"></div>
 
-    event.preventDefault();
-
-
-
-
-
-    const { templateId } = this.state;
-
-
-
-    //Getting the variables from the forms
-    this.sendFeedback(
-      templateId,
-      this.sender,
-      this.refs.email.value,
-      this.state.feedback,
-      this.refs.lastname.value,
-      this.refs.firstname.value,
-      this.refs.phone.value
-
-
-
-
-    );
-
-    this.setState({
-      formSubmitted: true
-    });
-
-
-
-  }
-
-  //In here the data is send to the mailgun server with the correct templateID
-  sendFeedback(templateId, senderEmail, receiverEmail, feedback, lastname, firstname, phone) {
-    window.emailjs
-      .send('mailgun', templateId, {
-        senderEmail,
-        receiverEmail,
-        feedback,
-        lastname,
-        firstname,
-        phone
-
-
-
-      })
-      .then(res => {
-        console.log('MAIL SENT!')
-        alert("Mail Sent")
-        this.setState({
-          formEmailSent: true
-        });
-      })
-      // Handle errors if the mail didnt passed 
-      .catch(err => console.error('Failed to send feedback. Error: ', err));
-  }
-
-
-
-  render() {
-
-    return (
-      <div>
-
-        <br />
-
-
-
-        <div className="row">
-
-          <form id="myform" className="col s12" onSubmit={this.onSubmit}>
-
-            <ul className="collection">
-              <li className="collection-item">Enter User Details</li>
-              <li className="collection-item">
-
-                <div className="input-field col s6">
-                  <i className="material-icons prefix">face</i>
-                  <input id="firstname" type="text" className="validate"
-                    ref="firstname" required />
-
-
-                </div>
-                <div className="input-field col s6">
-                  <i className="material-icons prefix">face</i>
-                  <input id="lastname" type="text" className="validate"
-                    ref="lastname" name="lname" required />
-
-
-                </div>
-
-
-                <div className="input-field col s6">
-                  <i className="material-icons prefix">email</i>
-                  <input id="email" type="email" className="validate"
-                    ref="email" required />
-
-                </div>
-
-                <div className="input-field col s6">
-                  <i className="material-icons prefix">phone</i>
-                  <input id="phone" type="text" className="validate"
-                    ref="phone" />
-
-
-                </div>
-
-
-
-
-              </li>
-
-            </ul>
-            <input type="submit" className="btn green" value="Confrim" />
-
-
-
-          </form>
-        </div>
-
-      </div>
-    )
-  }
+				
+			
+				</form>
+			</div>
+		</div>
+	)
 }
-
-
-export default Contact;

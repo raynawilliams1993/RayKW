@@ -11,20 +11,20 @@ import LandingPage from "./client/components/landingPage/landingPage";
 
 function App() {
   return (
-    
+
     <Router>
-    <div className="App">
-    <Navi/>
-   
-    <Wrapper>
-          <Route  path= "/" render={() => <LandingPage />} exact/>
-          <Route  path="/about" render= {()=> <About /> } exact />
-          <Route path="/contact" render= {()=> <Contact />} exact />
-          <Route  path="/portfolio" render= {()=> <Portfolio />} exact />
+      <div className="App">
+        <Navi />
+
+        <Wrapper>
+          <Route path="/" render={() => <LandingPage />} exact />
+          <Route path="/about" render={() => <About />} exact />
+          <Route path="/contact" render={() => <Contact />} exact />
+          <Route path="/portfolio" render={() => <Portfolio />} exact />
           
         </Wrapper>
-        
-    </div>
+
+      </div>
     </Router>
   );
 }
