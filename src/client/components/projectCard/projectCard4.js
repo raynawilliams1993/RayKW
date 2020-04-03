@@ -4,6 +4,7 @@ import {
   CardTitle, CardSubtitle
 } from 'reactstrap';
 import pic from "../assets/Project1.png"
+import "./project.scss";
 
 const ProjectCard4 = (props) => {
   return (

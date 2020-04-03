@@ -1,0 +1,28 @@
+
+
+.underline{
+    background: lightgray;
+    border-radius: 50%;
+    width: 80%;
+    height: 2px;
+    border: solid 1px lightgray;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  .card {
+    padding-top: 56px;
+    width: 35%;
+    // position: relative;
+    // display: flex;
+    flex-wrap: wrap-reverse;
+    margin-top: 50px;
+    margin-left: 150px;
+    margin-bottom: 50px;
+    margin-right: 150px;
+    &-text{
+        align-content: center;
+        word-wrap: break-word;
+    }
+    
+  }
+  
