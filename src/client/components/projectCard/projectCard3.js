@@ -9,7 +9,7 @@ import "./project.scss";
 
 const ProjectCard3 = (props) => {
   return (
-    <div>
+    <div class="diamond">
       <Card>
         <CardBody>
           <CardTitle>Burger Eater</CardTitle>

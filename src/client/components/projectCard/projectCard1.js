@@ -10,7 +10,7 @@ import pic from "../assets/EmployeeDir.png"
 
 const ProjectCard1 = (props) => {
   return (
-    <div>
+    <div class= "diamond">
       <Card>
         <CardBody>
           <CardTitle>Employee Directory</CardTitle>

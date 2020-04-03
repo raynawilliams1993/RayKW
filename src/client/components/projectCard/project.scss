@@ -1,5 +1,4 @@
 
-
 .underline{
     background: lightgray;
     border-radius: 50%;
@@ -11,17 +10,23 @@
   }
   .card {
     padding-top: 56px;
+    padding-bottom: 56px;
+    padding-left: 50px;
+    padding-right: 50px;
     width: 35%;
     // position: relative;
     // display: flex;
-    flex-wrap: wrap-reverse;
+    // flex-wrap: wrap-reverse;
     margin-top: 50px;
     margin-left: 150px;
     margin-bottom: 50px;
     margin-right: 150px;
+   border-style: double;
+   border-radius: 5px;
     &-text{
         align-content: center;
         word-wrap: break-word;
+
     }
     
   }

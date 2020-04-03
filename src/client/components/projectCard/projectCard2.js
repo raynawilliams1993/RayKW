@@ -9,7 +9,7 @@ import pic from "../assets/fitness.png"
 
 const ProjectCard2 = (props) => {
   return (
-    <div>
+    <div class="diamond">
       <Card>
         <CardBody>
           <CardTitle>Fitness Tracker</CardTitle>
