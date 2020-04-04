@@ -8,7 +8,7 @@ import "./project.scss";
 
 const ProjectCard4 = (props) => {
   return (
-    <div class="outter">
+    <div>
       <Card>
         <CardBody>
           <CardTitle>Bored in Denver</CardTitle>
