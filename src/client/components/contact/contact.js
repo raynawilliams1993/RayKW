@@ -59,24 +59,37 @@ export default function Contact() {
 
 				</form>
 			</div>
-				<div>
-					<Card>
-						<CardBody>
+			<div class="links">
+				<Card>
+					<CardBody>
+						<ul>
+							<li>
+								<CardLink href="https://github.com/raynawilliams1993">
+									GitHub
+						</CardLink>
 
-							<CardLink href="https://github.com/raynawilliams1993">
-								GitHub Profile
+							</li>
+							<li>
+								<CardLink href="https://www.linkedin.com/in/rayna-williams-225965191/">
+									LinkedIn
 						</CardLink>
-							<CardLink href="https://www.linkedin.com/in/rayna-williams-225965191/">
-								LinkedIn Profile
+
+							</li>
+							<li>
+								<CardLink href="https://docs.google.com/document/d/1VGxJrZkq4Ok5W4felziz_abvuS-3lW55m7eYnVMsTI0/edit?usp=sharing ">
+									Resume
 						</CardLink>
-							<CardLink href="https://docs.google.com/document/d/1VGxJrZkq4Ok5W4felziz_abvuS-3lW55m7eYnVMsTI0/edit?usp=sharing ">
-								Resume
-						</CardLink>
-						</CardBody>
-						
-				
-					</Card>
-				</div>
+
+
+							</li>
+						</ul>
+
+
+					</CardBody>
+
+
+				</Card>
+			</div>
 		</div>
 	)
 }

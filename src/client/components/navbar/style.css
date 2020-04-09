@@ -1,16 +1,20 @@
 a {
     background-color:magenta;
     color: white;
-    padding: 1em 1.5em;
+    padding-left: auto;
+    padding-top: auto;
+    padding-bottom: auto;
+    padding-right: auto;
     text-decoration: double;
     text-transform: uppercase;
+    display: inline;
     
   }
   
   /* Non-Demo Styles */
   body {
     display: flex;
-    justify-content: top;
+    justify-content: space-evenly;
     align-items: top;
     height: 100vh;
     

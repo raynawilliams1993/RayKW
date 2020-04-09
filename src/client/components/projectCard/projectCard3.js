@@ -12,14 +12,22 @@ const ProjectCard3 = (props) => {
     <div class="diamond">
       <Card>
         <CardBody>
-          <CardTitle style={{color: "magenta"}}>Burger Eater</CardTitle>
-          <CardSubtitle style={{color: "magenta"}}>Node Express Handlebars</CardSubtitle>
+          <CardTitle style={{ color: "magenta" }}>Burger Eater</CardTitle>
+          <CardSubtitle style={{ color: "magenta" }}>Node Express Handlebars</CardSubtitle>
         </CardBody>
-        <CardImg  src={pic} alt="burger" height="100px" weight="100px" />
+        <CardImg src={pic} alt="burger" height="100px" weight="100px" />
         <CardBody>
-          <CardText style={{color: "purple"}}>a burger log in app with MySQL, Node, Express, Handlebars and ORMS. </CardText>
-          <CardLink href="https://github.com/raynawilliams1993/burger">Github</CardLink>
-          <CardLink href=" https://eatingburgers2424.herokuapp.com/">Heroku</CardLink>
+          <CardText style={{ color: "purple" }}>a burger log in app with MySQL, Node, Express, Handlebars and ORMS. </CardText>
+          <ul>
+            <li>
+              <CardLink href="https://github.com/raynawilliams1993/burger">Github</CardLink>
+
+            </li>
+            <li>
+              <CardLink href=" https://eatingburgers2424.herokuapp.com/">Heroku</CardLink>
+
+            </li>
+          </ul>
         </CardBody>
       </Card>
     </div>
