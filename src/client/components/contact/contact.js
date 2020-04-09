@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './contact.scss';
 import axios from 'axios';
 import Spinner from '../spinner/spinner';
-import { CardText, CardBody, Card, CardLink } from 'reactstrap';
+import { CardText, CardBody, Card, CardLink, CardTitle } from 'reactstrap';
 
 export default function Contact() {
 	document.title = 'Contact';
@@ -62,6 +62,7 @@ export default function Contact() {
 			<div class="links">
 				<Card>
 					<CardBody>
+						<CardTitle>SOCIAL & DEVELOPMENT PLATFORMS</CardTitle>
 						<ul>
 							<li>
 								<CardLink href="https://github.com/raynawilliams1993">
