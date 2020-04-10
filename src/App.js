@@ -17,7 +17,7 @@ function App() {
         <Navi />
 
         <Wrapper>
-          <Route path="/landing" render={() => <LandingPage />} exact />
+          <Route path="/" render={() => <LandingPage />} exact />
           <Route path="/about" render={() => <About />} exact />
           <Route path="/contact" render={() => <Contact />} exact />
           <Route path="/portfolio" render={() => <Portfolio />} exact />

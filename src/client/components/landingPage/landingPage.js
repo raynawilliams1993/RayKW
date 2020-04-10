@@ -1,11 +1,11 @@
 import React from 'react'
-import { Provider, Heading, Subhead } from 'rebass'
+
 import {
-  Hero, CallToAction, ScrollDownIndicator
+  Hero
 } from 'react-landing-page'
 
 const LandingPage = props => (
-  <Provider>
+ 
     <Hero
       
       color="white"
@@ -13,14 +13,14 @@ const LandingPage = props => (
 
       backgroundImage="https://images.wallpaperscraft.com/image/earth_moon_space_galaxy_118437_1280x1280.jpg"
     >
-      <Heading>Rayna K. Williams</Heading>
-      <Subhead>FULL STACK WEB DEVELOPER</Subhead>
+      <h1>Rayna K. Williams</h1>
+      <h2>FULL STACK WEB DEVELOPER</h2>
 
 
 
 
 
     </Hero>
-  </Provider>
+
 )
 export default LandingPage;
