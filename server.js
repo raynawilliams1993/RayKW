@@ -31,11 +31,6 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(routes);
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/react-auth-simple", { useNewUrlParser: true }, function(err) {
-    if (err) throw err;
-    console.log(`mongoose connection successful`.yellow);
-    app.listen(PORT, (err)=> {
-        if (err) throw err;
-        console.log(`connected on port ${PORT}`.cyan)
-    });
-});
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
