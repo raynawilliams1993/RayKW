@@ -28,8 +28,9 @@ function Contact() {
 			<div class="links">
 				<Card>
 					<CardBody>
-						<CardTitle>SOCIAL & DEVELOPMENT PLATFORMS</CardTitle>
+						<CardTitle>DEVELOPMENT PLATFORMS</CardTitle>
 						<ul>
+
 							<li>
 								<CardLink href="https://github.com/raynawilliams1993">
 									GitHub
@@ -56,8 +57,23 @@ function Contact() {
 
 
 				</Card>
+				<Card>
+					<CardBody>
+						<CardTitle>
+							CONTACT ME VIA:
+						</CardTitle>
+						<ul>
+						
+								(720)-681-3392
+							
+							
+								raynawilliams123@gmail.com
+							
+						</ul>
+					</CardBody>
+				</Card>
 
-			<div class="underline"></div>
+				<div class="underline"></div>
 			</div>
 		</div>
 

@@ -15,18 +15,13 @@
       padding-top: 100px;
       width: 100%;
       position: relative;
-    //   display: flex;
       flex-wrap: wrap;
       min-height: calc(100vh - 56px);
-      
       
       &-image{
           
           background: #ffffff55 url('https://images.wallpaperscraft.com/image/planet_galaxy_universe_121293_1280x1280.jpg') center center / cover;
-        //   background-blend-mode: overlay;
-        //   clip-path: polygon(100% 100%, 90% 100, 100% 50%, 90% 100%, 0% 100%);
-        //   width: 400%;
-        //   height: inherit;
+       
   
           @media screen and (max-width: 2000px) {
               height: 200px;
@@ -34,12 +29,5 @@
               clip-path: polygon(0 0, 100% 0%, 100% 90%, 50% 100%, 0 90%);
           }
       }
-  
-    
-    //   div{
-    //     align-items: center;
-    //     padding-bottom: inherit;
-    //     padding-top: unset;
-    //   }
     
   }

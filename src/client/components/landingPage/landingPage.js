@@ -7,14 +7,15 @@ import {
 const LandingPage = props => (
   <Provider>
     <Hero
+      
       color="white"
-      //   bg="white"
+        // bg="white"
 
-      backgroundImage="https://images.wallpaperscraft.com/image/earth_moon_space_galaxy_118437_1280x720.jpg"
+      backgroundImage="https://images.wallpaperscraft.com/image/earth_moon_space_galaxy_118437_1280x1280.jpg"
     >
       <Heading>Rayna K. Williams</Heading>
+      <Subhead>FULL STACK WEB DEVELOPER</Subhead>
 
-      <Subhead>Email: raynawilliams123@gmail.com </Subhead>
 
 
 
