@@ -59,6 +59,26 @@ function Contact() {
 
 
 				</Card>
+
+				<Card>
+					<CardBody>
+						<CardTitle>
+							CONTACT ME VIA:
+						</CardTitle>
+						<ul>
+						
+								(720)-681-3392
+							
+							
+								raynawilliams123@gmail.com
+							
+						</ul>
+					</CardBody>
+				</Card>
+
+				<div class="underline"></div>
+
+
 			</div>
 		</div>
 
