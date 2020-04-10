@@ -3,8 +3,23 @@
   "version": "1.0.0",
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "axios": "^0.18.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.9.3",
+    "morgan": "^1.9.1",
+    "node-sass": "^4.13.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "reactstrap": "^8.4.1"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.2",
+    "nodemon": "^1.19.4"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
