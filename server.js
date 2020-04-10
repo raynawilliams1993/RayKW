@@ -27,7 +27,10 @@ app.use(passport.session());
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
 }
-
+app.get('/', function(req, res){
+    res.redirect('/todo');
+ });
+ 
 app.use(routes);
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/react-auth-simple", { useNewUrlParser: true }, function(err) {
