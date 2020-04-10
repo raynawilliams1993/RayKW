@@ -25,8 +25,6 @@ function Contact() {
 	return (
 		<div>
 			<div class="contact-image"></div>
-
-			<div class="underline"></div>
 			<div class="links">
 				<Card>
 					<CardBody>
@@ -58,6 +56,8 @@ function Contact() {
 
 
 				</Card>
+
+			<div class="underline"></div>
 			</div>
 		</div>
 

@@ -12,51 +12,34 @@
       display: inline;
   }
   .contact{
-      padding-top: 56px;
+      padding-top: 100px;
       width: 100%;
       position: relative;
-      display: flex;
+    //   display: flex;
       flex-wrap: wrap;
       min-height: calc(100vh - 56px);
       
       
       &-image{
           
-          background: #ffffff55 url('https://images.wallpaperscraft.com/image/planet_galaxy_universe_121293_1280x720.jpg') center center / cover;
+          background: #ffffff55 url('https://images.wallpaperscraft.com/image/planet_galaxy_universe_121293_1280x1280.jpg') center center / cover;
         //   background-blend-mode: overlay;
-          clip-path: polygon(100% 100%, 90% 100, 100% 50%, 90% 100%, 0% 100%);
-          width: 400%;
-          height: inherit;
+        //   clip-path: polygon(100% 100%, 90% 100, 100% 50%, 90% 100%, 0% 100%);
+        //   width: 400%;
+        //   height: inherit;
   
-          @media screen and (max-width: 991px) {
+          @media screen and (max-width: 2000px) {
               height: 200px;
               width: 100%;
               clip-path: polygon(0 0, 100% 0%, 100% 90%, 50% 100%, 0 90%);
           }
       }
   
-      form{
-          width: 60%;
-  
-          @media screen and (max-width: 991px) {
-              width: 75%;
-          }
-      }
-  
-      &-form{
-          padding: 30px 10px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 50%;
-          @media screen and (max-width: 991px) {
-              width: 100%;
-          }
-      }
-      div{
-        align-items: center;
-        padding-bottom: inherit;
-        padding-top: unset;
-      }
+    
+    //   div{
+    //     align-items: center;
+    //     padding-bottom: inherit;
+    //     padding-top: unset;
+    //   }
     
   }
