@@ -30,14 +30,8 @@ if (process.env.NODE_ENV === "production") {
 app.get('/', function(req, res){
     res.redirect('/todo');
  });
- 
+
 app.use(routes);
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/react-auth-simple", { useNewUrlParser: true }, function(err) {
-    if (err) throw err;
-    console.log(`mongoose connection successful`.yellow);
-    app.listen(PORT, (err)=> {
-        if (err) throw err;
-        console.log(`connected on port ${PORT}`.cyan)
-    });
+log.Fatal(http.ListenAndServe(":" + os.Getenv("PORT"), router))
 });
