@@ -25,6 +25,8 @@ function Contact() {
 	return (
 		<div>
 			<div class="contact-image"></div>
+
+			<div class="underline"></div>
 			<div class="links">
 				<Card>
 					<CardBody>
@@ -57,6 +59,7 @@ function Contact() {
 
 
 				</Card>
+<<<<<<< HEAD
 				<Card>
 					<CardBody>
 						<CardTitle>
@@ -74,6 +77,8 @@ function Contact() {
 				</Card>
 
 				<div class="underline"></div>
+=======
+>>>>>>> parent of 24cc42d... got contact cover img to display perfectlyyyyy
 			</div>
 		</div>
 
