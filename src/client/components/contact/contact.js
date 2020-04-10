@@ -60,6 +60,7 @@ function Contact() {
 
 				</Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 				<Card>
 					<CardBody>
@@ -79,6 +80,8 @@ function Contact() {
 
 				<div class="underline"></div>
 
+=======
+>>>>>>> parent of 24cc42d... got contact cover img to display perfectlyyyyy
 =======
 >>>>>>> parent of 24cc42d... got contact cover img to display perfectlyyyyy
 			</div>
