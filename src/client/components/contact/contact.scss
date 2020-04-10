@@ -15,34 +15,29 @@
       padding-top: 56px;
       width: 100%;
       position: relative;
-<<<<<<< HEAD
-=======
+
+
       display: flex;
->>>>>>> parent of 24cc42d... got contact cover img to display perfectlyyyyy
+
       flex-wrap: wrap;
       min-height: calc(100vh - 56px);
       
       &-image{
-          
-<<<<<<< HEAD
-          background: #ffffff55 url('https://images.wallpaperscraft.com/image/planet_galaxy_universe_121293_1280x1280.jpg') center center / cover;
-       
-=======
+
+
           background: #ffffff55 url('https://images.wallpaperscraft.com/image/planet_galaxy_universe_121293_1280x720.jpg') center center / cover;
         //   background-blend-mode: overlay;
           clip-path: polygon(100% 100%, 90% 100, 100% 50%, 90% 100%, 0% 100%);
           width: 400%;
           height: inherit;
->>>>>>> parent of 24cc42d... got contact cover img to display perfectlyyyyy
-  
+
           @media screen and (max-width: 991px) {
               height: 200px;
               width: 100%;
               clip-path: polygon(0 0, 100% 0%, 100% 90%, 50% 100%, 0 90%);
           }
       }
-<<<<<<< HEAD
-=======
+
   
       form{
           width: 60%;
@@ -67,6 +62,6 @@
         padding-bottom: inherit;
         padding-top: unset;
       }
->>>>>>> parent of 24cc42d... got contact cover img to display perfectlyyyyy
+
     
   }
