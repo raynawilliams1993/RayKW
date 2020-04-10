@@ -23,9 +23,10 @@
       &-image{
           
           background: #ffffff55 url('https://images.wallpaperscraft.com/image/planet_galaxy_universe_121293_1280x720.jpg') center center / cover;
-          background-blend-mode: overlay;
-          clip-path: polygon(0% 0%, 90% 0, 100% 50%, 90% 100%, 0% 100%);
+        //   background-blend-mode: overlay;
+          clip-path: polygon(100% 100%, 90% 100, 100% 50%, 90% 100%, 0% 100%);
           width: 400%;
+          height: inherit;
   
           @media screen and (max-width: 991px) {
               height: 200px;
